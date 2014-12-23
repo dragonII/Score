@@ -14,13 +14,13 @@
 		2F20CE881A49369E0041012B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F20CE871A49369E0041012B /* main.m */; };
 		2F20CE8C1A49369E0041012B /* BFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F20CE8B1A49369E0041012B /* BFAppDelegate.m */; };
 		2F20CE8F1A49369E0041012B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F20CE8D1A49369E0041012B /* Main.storyboard */; };
-		2F20CE921A49369E0041012B /* BFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F20CE911A49369E0041012B /* BFViewController.m */; };
 		2F20CE941A49369E0041012B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F20CE931A49369E0041012B /* Images.xcassets */; };
 		2F20CE9B1A49369E0041012B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F20CE9A1A49369E0041012B /* XCTest.framework */; };
 		2F20CE9C1A49369E0041012B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F20CE7B1A49369E0041012B /* Foundation.framework */; };
 		2F20CE9D1A49369F0041012B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F20CE7F1A49369E0041012B /* UIKit.framework */; };
 		2F20CEA51A49369F0041012B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F20CEA31A49369F0041012B /* InfoPlist.strings */; };
 		2F20CEA71A49369F0041012B /* ScoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F20CEA61A49369F0041012B /* ScoreTests.m */; };
+		2FEA5D7B1A49472400E5C767 /* BFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA5D7A1A49472400E5C767 /* BFLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +45,14 @@
 		2F20CE8A1A49369E0041012B /* BFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFAppDelegate.h; sourceTree = "<group>"; };
 		2F20CE8B1A49369E0041012B /* BFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFAppDelegate.m; sourceTree = "<group>"; };
 		2F20CE8E1A49369E0041012B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2F20CE901A49369E0041012B /* BFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFViewController.h; sourceTree = "<group>"; };
-		2F20CE911A49369E0041012B /* BFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFViewController.m; sourceTree = "<group>"; };
 		2F20CE931A49369E0041012B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F20CE991A49369E0041012B /* ScoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F20CE9A1A49369E0041012B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2F20CEA21A49369F0041012B /* ScoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScoreTests-Info.plist"; sourceTree = "<group>"; };
 		2F20CEA41A49369F0041012B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F20CEA61A49369F0041012B /* ScoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreTests.m; sourceTree = "<group>"; };
+		2FEA5D791A49472400E5C767 /* BFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFLoginViewController.h; sourceTree = "<group>"; };
+		2FEA5D7A1A49472400E5C767 /* BFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +115,8 @@
 				2F20CE8A1A49369E0041012B /* BFAppDelegate.h */,
 				2F20CE8B1A49369E0041012B /* BFAppDelegate.m */,
 				2F20CE8D1A49369E0041012B /* Main.storyboard */,
-				2F20CE901A49369E0041012B /* BFViewController.h */,
-				2F20CE911A49369E0041012B /* BFViewController.m */,
+				2FEA5D791A49472400E5C767 /* BFLoginViewController.h */,
+				2FEA5D7A1A49472400E5C767 /* BFLoginViewController.m */,
 				2F20CE931A49369E0041012B /* Images.xcassets */,
 				2F20CE821A49369E0041012B /* Supporting Files */,
 			);
@@ -253,8 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F20CE921A49369E0041012B /* BFViewController.m in Sources */,
 				2F20CE8C1A49369E0041012B /* BFAppDelegate.m in Sources */,
+				2FEA5D7B1A49472400E5C767 /* BFLoginViewController.m in Sources */,
 				2F20CE881A49369E0041012B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

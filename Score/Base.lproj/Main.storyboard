@@ -1,21 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qi1-rR-67p">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="BFViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="BFLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gaC-oE-x9B"/>
+                        <viewControllerLayoutGuide type="bottom" id="Whi-Im-7Uw"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LeO-rQ-YjM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soH-ZX-QaJ">
+                                <rect key="frame" x="137" y="404" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.1934357324" blue="0.27796586699999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ll-mU-2nE">
+                                <rect key="frame" x="137" y="442" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.1934357324" blue="0.27796586699999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-tO-YS1">
+                                <rect key="frame" x="137" y="487" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.1934357324" blue="0.27796586699999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LeO-rQ-YjM" secondAttribute="trailing" id="7aY-W0-uFK"/>
+                            <constraint firstItem="Whi-Im-7Uw" firstAttribute="top" secondItem="LeO-rQ-YjM" secondAttribute="bottom" id="7xE-sn-TeY"/>
+                            <constraint firstItem="LeO-rQ-YjM" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="9dW-Vp-0Qs"/>
+                            <constraint firstItem="7Ll-mU-2nE" firstAttribute="leading" secondItem="soH-ZX-QaJ" secondAttribute="leading" id="Aj0-xZ-Urg"/>
+                            <constraint firstItem="7Ll-mU-2nE" firstAttribute="centerX" secondItem="LeO-rQ-YjM" secondAttribute="centerX" id="Fqc-O8-CUC"/>
+                            <constraint firstItem="7Ll-mU-2nE" firstAttribute="top" secondItem="soH-ZX-QaJ" secondAttribute="bottom" constant="8" symbolic="YES" id="h4Q-ab-nnS"/>
+                            <constraint firstItem="iWK-tO-YS1" firstAttribute="leading" secondItem="7Ll-mU-2nE" secondAttribute="leading" id="lta-e4-SKG"/>
+                            <constraint firstItem="LeO-rQ-YjM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="mWi-XQ-rJg"/>
+                            <constraint firstItem="iWK-tO-YS1" firstAttribute="top" secondItem="7Ll-mU-2nE" secondAttribute="bottom" constant="15" id="uHb-Co-9K8"/>
+                            <constraint firstItem="Whi-Im-7Uw" firstAttribute="top" secondItem="iWK-tO-YS1" secondAttribute="bottom" constant="51" id="wNQ-UX-9qo"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="w2J-B5-CMd"/>
+                    <connections>
+                        <outlet property="phoneNumButton" destination="7Ll-mU-2nE" id="jiS-DC-27i"/>
+                        <outlet property="registerButton" destination="iWK-tO-YS1" id="tnD-UZ-eNT"/>
+                        <outlet property="sinaButton" destination="soH-ZX-QaJ" id="vXv-lh-myz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="294" y="56"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Es1-CH-6z4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qi1-rR-67p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S2G-pP-aEF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="iLu-Fr-Lvt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PkF-km-tz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="56"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

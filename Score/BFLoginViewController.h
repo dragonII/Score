@@ -1,5 +1,5 @@
 //
-//  BFViewController.h
+//  BFLoginViewController.h
 //  Score
 //
 //  Created by Wang Long on 12/23/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BFViewController : UIViewController
+@interface BFLoginViewController : UIViewController
 
 @end
