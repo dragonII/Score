@@ -15,18 +15,12 @@
     // Override point for customization after application launch.
     
     UIViewController *rootVC = self.window.rootViewController;
-    UINavigationController *rootNavigationVC = (UINavigationController *)rootVC;
-    rootNavigationVC.navigationBarHidden = YES;
-    
-    /*
-    //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
-    [UIApplication sharedApplication].statusBarHidden = YES;
-    BOOL statusHidden = [UIApplication sharedApplication].statusBarHidden;
-    NSLog(@"StatusBarHidden: %@", statusHidden ? @"YES" : @"NO");
-     */
+    self.rootNavigationVC = (UINavigationController *)rootVC;
+    [self.rootNavigationVC.navigationBar setBarTintColor:[UIColor redColor]];
     
     return YES;
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

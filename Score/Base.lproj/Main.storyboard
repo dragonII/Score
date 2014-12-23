@@ -16,61 +16,139 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LeO-rQ-YjM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="tex-wW-cql">
+                                <rect key="frame" x="75" y="50.5" width="170" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soH-ZX-QaJ">
-                                <rect key="frame" x="137" y="404" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtE-LW-RJ7">
+                                <rect key="frame" x="66" y="422.5" width="179" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.95686274510000002" green="0.1934357324" blue="0.27796586699999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="注册" backgroundImage="RoundedRect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="KeG-aV-yto" kind="push" id="MOj-xs-ETY"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ll-mU-2nE">
-                                <rect key="frame" x="137" y="442" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KY4-zg-g78">
+                                <rect key="frame" x="20" y="302.5" width="280" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="新浪微博登录">
                                     <color key="titleColor" red="0.95686274510000002" green="0.1934357324" blue="0.27796586699999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cDe-5l-SUK" kind="push" id="rLV-Yh-adC"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-tO-YS1">
-                                <rect key="frame" x="137" y="487" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZr-3K-crt">
+                                <rect key="frame" x="20" y="362.5" width="280" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="手机号码登录">
                                     <color key="titleColor" red="0.95686274510000002" green="0.1934357324" blue="0.27796586699999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ZRQ-F5-fca" kind="push" id="YUR-tf-JkU"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weiboIcon" translatesAutoresizingMaskIntoConstraints="NO" id="W0E-BE-0eC">
+                                <rect key="frame" x="33" y="305" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zg1-Rd-ebo">
+                                <rect key="frame" x="33" y="365" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="LeO-rQ-YjM" secondAttribute="trailing" id="7aY-W0-uFK"/>
-                            <constraint firstItem="Whi-Im-7Uw" firstAttribute="top" secondItem="LeO-rQ-YjM" secondAttribute="bottom" id="7xE-sn-TeY"/>
-                            <constraint firstItem="LeO-rQ-YjM" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="9dW-Vp-0Qs"/>
-                            <constraint firstItem="7Ll-mU-2nE" firstAttribute="leading" secondItem="soH-ZX-QaJ" secondAttribute="leading" id="Aj0-xZ-Urg"/>
-                            <constraint firstItem="7Ll-mU-2nE" firstAttribute="centerX" secondItem="LeO-rQ-YjM" secondAttribute="centerX" id="Fqc-O8-CUC"/>
-                            <constraint firstItem="7Ll-mU-2nE" firstAttribute="top" secondItem="soH-ZX-QaJ" secondAttribute="bottom" constant="8" symbolic="YES" id="h4Q-ab-nnS"/>
-                            <constraint firstItem="iWK-tO-YS1" firstAttribute="leading" secondItem="7Ll-mU-2nE" secondAttribute="leading" id="lta-e4-SKG"/>
-                            <constraint firstItem="LeO-rQ-YjM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="mWi-XQ-rJg"/>
-                            <constraint firstItem="iWK-tO-YS1" firstAttribute="top" secondItem="7Ll-mU-2nE" secondAttribute="bottom" constant="15" id="uHb-Co-9K8"/>
-                            <constraint firstItem="Whi-Im-7Uw" firstAttribute="top" secondItem="iWK-tO-YS1" secondAttribute="bottom" constant="51" id="wNQ-UX-9qo"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.1934357324" blue="0.27796586699999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="w2J-B5-CMd"/>
                     <connections>
-                        <outlet property="phoneNumButton" destination="7Ll-mU-2nE" id="jiS-DC-27i"/>
-                        <outlet property="registerButton" destination="iWK-tO-YS1" id="tnD-UZ-eNT"/>
-                        <outlet property="sinaButton" destination="soH-ZX-QaJ" id="vXv-lh-myz"/>
+                        <outlet property="phoneButton" destination="RZr-3K-crt" id="IZI-KQ-hIl"/>
+                        <outlet property="registerButton" destination="MtE-LW-RJ7" id="dBN-3K-8Nt"/>
+                        <outlet property="sinaButton" destination="KY4-zg-g78" id="M7r-Wc-m0u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="294" y="56"/>
         </scene>
+        <!--Phone Login View Controller-->
+        <scene sceneID="5fj-c9-GWR">
+            <objects>
+                <viewController id="ZRQ-F5-fca" customClass="BFPhoneLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wpo-YC-Tm8"/>
+                        <viewControllerLayoutGuide type="bottom" id="oo2-Ns-upN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rod-YL-LVV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VIX-M9-mZE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycK-gU-MW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="-682"/>
+        </scene>
+        <!--Account Register View Controller-->
+        <scene sceneID="A5e-k7-La4">
+            <objects>
+                <viewController id="KeG-aV-yto" customClass="BFAccountRegisterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9hj-xc-nqh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ogZ-lK-cm8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="39G-B5-ReT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P3r-zB-BWJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EW8-FP-uVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1270" y="-682"/>
+        </scene>
+        <!--Weibo Login View Controller-->
+        <scene sceneID="Yxx-rN-Ixv">
+            <objects>
+                <viewController id="cDe-5l-SUK" customClass="BFWeiboLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KCt-ic-Zpo"/>
+                        <viewControllerLayoutGuide type="bottom" id="hgw-G6-OJy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N48-ov-GQk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZYC-sR-5zY">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="T3z-gZ-yEY">
+                            <connections>
+                                <action selector="cancelPressed:" destination="cDe-5l-SUK" id="VF1-co-bz2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBH-1H-dTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="-689"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Es1-CH-6z4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qi1-rR-67p" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qi1-rR-67p" customClass="BFNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S2G-pP-aEF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -86,6 +164,13 @@
             <point key="canvasLocation" x="-177" y="56"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="168" height="93"/>
+        <image name="RoundedRect" width="275" height="89"/>
+        <image name="phoneIcon" width="59" height="65"/>
+        <image name="weiboIcon" width="62" height="60"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
