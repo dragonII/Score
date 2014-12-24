@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Wang Long. All rights reserved.
 //
 
-#import "BFHomeTabsViewController.h"
+#import "BFMainTabsViewController.h"
 #import "BFAppDelegate.h"
 
-@interface BFHomeTabsViewController ()
+@interface BFMainTabsViewController ()
 
 @end
 
-@implementation BFHomeTabsViewController
+@implementation BFMainTabsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

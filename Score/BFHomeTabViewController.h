@@ -1,5 +1,5 @@
 //
-//  BFHomeTabsViewController.h
+//  BFHomeTabViewController.h
 //  Score
 //
 //  Created by Wang Long on 12/24/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BFHomeTabsViewController : UITabBarController
+@interface BFHomeTabViewController : UIViewController
 
 @end
