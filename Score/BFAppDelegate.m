@@ -7,6 +7,7 @@
 //
 
 #import "BFAppDelegate.h"
+#import "BFDataPersistence.h"
 
 @implementation BFAppDelegate
 
@@ -15,8 +16,12 @@
     // Override point for customization after application launch.
     
     UIViewController *rootVC = self.window.rootViewController;
-    self.rootNavigationVC = (UINavigationController *)rootVC;
+    self.rootNavigationVC = (BFNavigationController *)rootVC;
     [self.rootNavigationVC.navigationBar setBarTintColor:[UIColor redColor]];
+    
+    NSString *resultStr = [BFDataPersistence getFirstLaunchValue];
+    
+    self.showWizard = [resultStr isEqualToString:@"YES"] ? YES : NO;
     
     return YES;
 }

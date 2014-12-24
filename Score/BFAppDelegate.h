@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "BFNavigationController.h"
+
 @interface BFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) UINavigationController *rootNavigationVC;
+@property (strong, nonatomic) BFNavigationController *rootNavigationVC;
+@property (nonatomic) BOOL showWizard;
 
 @end

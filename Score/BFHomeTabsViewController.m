@@ -1,19 +1,19 @@
 //
-//  BFNavigationController.m
+//  BFHomeTabsViewController.m
 //  Score
 //
-//  Created by Wang Long on 12/23/14.
+//  Created by Wang Long on 12/24/14.
 //  Copyright (c) 2014 Wang Long. All rights reserved.
 //
 
-#import "BFNavigationController.h"
-#import "BFWizardViewController.h"
+#import "BFHomeTabsViewController.h"
+#import "BFAppDelegate.h"
 
-@interface BFNavigationController ()
+@interface BFHomeTabsViewController ()
 
 @end
 
-@implementation BFNavigationController
+@implementation BFHomeTabsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,11 +28,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
+    
+    self.tabBar.tintColor = [UIColor redColor];
 }
 
 - (void)didReceiveMemoryWarning

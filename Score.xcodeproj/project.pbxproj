@@ -20,6 +20,9 @@
 		2F20CE9D1A49369F0041012B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F20CE7F1A49369E0041012B /* UIKit.framework */; };
 		2F20CEA51A49369F0041012B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F20CEA31A49369F0041012B /* InfoPlist.strings */; };
 		2F20CEA71A49369F0041012B /* ScoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F20CEA61A49369F0041012B /* ScoreTests.m */; };
+		2F4BCAE01A4A67B2004CD381 /* BFWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCADF1A4A67B2004CD381 /* BFWizardViewController.m */; };
+		2F4BCAE31A4A68D7004CD381 /* BFHomeTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCAE21A4A68D7004CD381 /* BFHomeTabsViewController.m */; };
+		2F4BCB271A4A94E4004CD381 /* BFDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCB261A4A94E4004CD381 /* BFDataPersistence.m */; };
 		2FA49A6D1A49B80E00689E7D /* BFWeiboLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA49A6C1A49B80E00689E7D /* BFWeiboLoginViewController.m */; };
 		2FA49A701A49B81E00689E7D /* BFPhoneLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA49A6F1A49B81E00689E7D /* BFPhoneLoginViewController.m */; };
 		2FA49A731A49B83400689E7D /* BFAccountRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA49A721A49B83400689E7D /* BFAccountRegisterViewController.m */; };
@@ -55,6 +58,12 @@
 		2F20CEA21A49369F0041012B /* ScoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScoreTests-Info.plist"; sourceTree = "<group>"; };
 		2F20CEA41A49369F0041012B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F20CEA61A49369F0041012B /* ScoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreTests.m; sourceTree = "<group>"; };
+		2F4BCADE1A4A67B2004CD381 /* BFWizardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFWizardViewController.h; sourceTree = "<group>"; };
+		2F4BCADF1A4A67B2004CD381 /* BFWizardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFWizardViewController.m; sourceTree = "<group>"; };
+		2F4BCAE11A4A68D7004CD381 /* BFHomeTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFHomeTabsViewController.h; sourceTree = "<group>"; };
+		2F4BCAE21A4A68D7004CD381 /* BFHomeTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFHomeTabsViewController.m; sourceTree = "<group>"; };
+		2F4BCB251A4A94E4004CD381 /* BFDataPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDataPersistence.h; sourceTree = "<group>"; };
+		2F4BCB261A4A94E4004CD381 /* BFDataPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDataPersistence.m; sourceTree = "<group>"; };
 		2FA49A6B1A49B80E00689E7D /* BFWeiboLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFWeiboLoginViewController.h; sourceTree = "<group>"; };
 		2FA49A6C1A49B80E00689E7D /* BFWeiboLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFWeiboLoginViewController.m; sourceTree = "<group>"; };
 		2FA49A6E1A49B81E00689E7D /* BFPhoneLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPhoneLoginViewController.h; sourceTree = "<group>"; };
@@ -126,9 +135,13 @@
 			children = (
 				2F20CE8A1A49369E0041012B /* BFAppDelegate.h */,
 				2F20CE8B1A49369E0041012B /* BFAppDelegate.m */,
-				2F20CE8D1A49369E0041012B /* Main.storyboard */,
 				2FA49A741A49C36000689E7D /* BFNavigationController.h */,
 				2FA49A751A49C36000689E7D /* BFNavigationController.m */,
+				2F20CE8D1A49369E0041012B /* Main.storyboard */,
+				2F4BCADE1A4A67B2004CD381 /* BFWizardViewController.h */,
+				2F4BCADF1A4A67B2004CD381 /* BFWizardViewController.m */,
+				2F4BCAE11A4A68D7004CD381 /* BFHomeTabsViewController.h */,
+				2F4BCAE21A4A68D7004CD381 /* BFHomeTabsViewController.m */,
 				2FEA5D791A49472400E5C767 /* BFLoginViewController.h */,
 				2FEA5D7A1A49472400E5C767 /* BFLoginViewController.m */,
 				2FA49A6B1A49B80E00689E7D /* BFWeiboLoginViewController.h */,
@@ -137,6 +150,8 @@
 				2FA49A6F1A49B81E00689E7D /* BFPhoneLoginViewController.m */,
 				2FA49A711A49B83400689E7D /* BFAccountRegisterViewController.h */,
 				2FA49A721A49B83400689E7D /* BFAccountRegisterViewController.m */,
+				2F4BCB251A4A94E4004CD381 /* BFDataPersistence.h */,
+				2F4BCB261A4A94E4004CD381 /* BFDataPersistence.m */,
 				2F20CE931A49369E0041012B /* Images.xcassets */,
 				2F20CE821A49369E0041012B /* Supporting Files */,
 			);
@@ -274,9 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F20CE8C1A49369E0041012B /* BFAppDelegate.m in Sources */,
+				2F4BCB271A4A94E4004CD381 /* BFDataPersistence.m in Sources */,
 				2FA49A6D1A49B80E00689E7D /* BFWeiboLoginViewController.m in Sources */,
 				2FEA5D7B1A49472400E5C767 /* BFLoginViewController.m in Sources */,
+				2F4BCAE01A4A67B2004CD381 /* BFWizardViewController.m in Sources */,
 				2FA49A731A49B83400689E7D /* BFAccountRegisterViewController.m in Sources */,
+				2F4BCAE31A4A68D7004CD381 /* BFHomeTabsViewController.m in Sources */,
 				2F20CE881A49369E0041012B /* main.m in Sources */,
 				2FA49A761A49C36000689E7D /* BFNavigationController.m in Sources */,
 				2FA49A701A49B81E00689E7D /* BFPhoneLoginViewController.m in Sources */,
