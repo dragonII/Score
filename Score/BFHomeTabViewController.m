@@ -39,14 +39,14 @@
     button.layer.cornerRadius = 5.0f;
     button.tag = tag;
     
-    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:nil action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button];
 }
 
 - (void)buttonPressed:(UIButton *)button
 {
-    NSLog(@"Button %d Pressed", button.tag);
+    NSLog(@"Button %ld Pressed", (long)button.tag);
 }
 
 - (void)initButtonsInView
@@ -147,6 +147,19 @@
                      Rect:CGRectMake(241, 363, 74, 63)
                       Tag:2012];
 
+    UIButton *qScanButton = [[UIButton alloc] initWithFrame:CGRectMake(15, 30, 40, 40)];
+    [qScanButton setImage:[UIImage imageNamed:@"testIcon"] forState:UIControlStateNormal];
+    [qScanButton addTarget:nil action:@selector(showScanView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:qScanButton];
+    
+    UIButton *switchButton = [[UIButton alloc] initWithFrame:CGRectMake(275, 30, 40, 40)];
+    [switchButton setImage:[UIImage imageNamed:@"testIcon"] forState:UIControlStateNormal];
+    [self.view addSubview:switchButton];
+}
+
+- (void)showScanView
+{
+    [self performSegueWithIdentifier:@"ShowScanView" sender:nil];
 }
 
 
