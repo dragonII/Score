@@ -28,6 +28,9 @@
 		2F20CE9D1A49369F0041012B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F20CE7F1A49369E0041012B /* UIKit.framework */; };
 		2F20CEA51A49369F0041012B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F20CEA31A49369F0041012B /* InfoPlist.strings */; };
 		2F20CEA71A49369F0041012B /* ScoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F20CEA61A49369F0041012B /* ScoreTests.m */; };
+		2F29FDBF1A651D310061AC37 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F29FDBE1A651D310061AC37 /* CHTCollectionViewWaterfallLayout.m */; };
+		2F29FDC21A651D650061AC37 /* MainPageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F29FDC11A651D650061AC37 /* MainPageCollectionCell.xib */; };
+		2F29FDC51A651E860061AC37 /* MainPageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F29FDC41A651E860061AC37 /* MainPageCollectionCell.m */; };
 		2F4BCAE01A4A67B2004CD381 /* BFWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCADF1A4A67B2004CD381 /* BFWizardViewController.m */; };
 		2F4BCAE31A4A68D7004CD381 /* BFMainTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCAE21A4A68D7004CD381 /* BFMainTabsViewController.m */; };
 		2F4BCB271A4A94E4004CD381 /* BFDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCB261A4A94E4004CD381 /* BFDataPersistence.m */; };
@@ -36,6 +39,7 @@
 		2FA49A731A49B83400689E7D /* BFAccountRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA49A721A49B83400689E7D /* BFAccountRegisterViewController.m */; };
 		2FA49A761A49C36000689E7D /* BFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA49A751A49C36000689E7D /* BFNavigationController.m */; };
 		2FB21DA51A4AA5DE00BC1765 /* BFHomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB21DA41A4AA5DE00BC1765 /* BFHomeTabViewController.m */; };
+		2FB9161F1A656D8400754FDD /* BFTabsNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9161E1A656D8400754FDD /* BFTabsNavigationViewController.m */; };
 		2FEA5D7B1A49472400E5C767 /* BFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA5D7A1A49472400E5C767 /* BFLoginViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +100,11 @@
 		2F20CEA21A49369F0041012B /* ScoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScoreTests-Info.plist"; sourceTree = "<group>"; };
 		2F20CEA41A49369F0041012B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F20CEA61A49369F0041012B /* ScoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreTests.m; sourceTree = "<group>"; };
+		2F29FDBD1A651D310061AC37 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		2F29FDBE1A651D310061AC37 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		2F29FDC11A651D650061AC37 /* MainPageCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainPageCollectionCell.xib; sourceTree = "<group>"; };
+		2F29FDC31A651E860061AC37 /* MainPageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageCollectionCell.h; sourceTree = "<group>"; };
+		2F29FDC41A651E860061AC37 /* MainPageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageCollectionCell.m; sourceTree = "<group>"; };
 		2F4BCADE1A4A67B2004CD381 /* BFWizardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFWizardViewController.h; sourceTree = "<group>"; };
 		2F4BCADF1A4A67B2004CD381 /* BFWizardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFWizardViewController.m; sourceTree = "<group>"; };
 		2F4BCAE11A4A68D7004CD381 /* BFMainTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMainTabsViewController.h; sourceTree = "<group>"; };
@@ -112,6 +121,8 @@
 		2FA49A751A49C36000689E7D /* BFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFNavigationController.m; sourceTree = "<group>"; };
 		2FB21DA31A4AA5DD00BC1765 /* BFHomeTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFHomeTabViewController.h; sourceTree = "<group>"; };
 		2FB21DA41A4AA5DE00BC1765 /* BFHomeTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFHomeTabViewController.m; sourceTree = "<group>"; };
+		2FB9161D1A656D8400754FDD /* BFTabsNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTabsNavigationViewController.h; sourceTree = "<group>"; };
+		2FB9161E1A656D8400754FDD /* BFTabsNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTabsNavigationViewController.m; sourceTree = "<group>"; };
 		2FEA5D791A49472400E5C767 /* BFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFLoginViewController.h; sourceTree = "<group>"; };
 		2FEA5D7A1A49472400E5C767 /* BFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,15 +249,20 @@
 		2F20CE811A49369E0041012B /* Score */ = {
 			isa = PBXGroup;
 			children = (
+				2F29FDC01A651D430061AC37 /* CollectionCell */,
 				2F20CE8A1A49369E0041012B /* BFAppDelegate.h */,
 				2F20CE8B1A49369E0041012B /* BFAppDelegate.m */,
 				2FA49A741A49C36000689E7D /* BFNavigationController.h */,
 				2FA49A751A49C36000689E7D /* BFNavigationController.m */,
 				2F20CE8D1A49369E0041012B /* Main.storyboard */,
+				2F29FDBD1A651D310061AC37 /* CHTCollectionViewWaterfallLayout.h */,
+				2F29FDBE1A651D310061AC37 /* CHTCollectionViewWaterfallLayout.m */,
 				2F4BCADE1A4A67B2004CD381 /* BFWizardViewController.h */,
 				2F4BCADF1A4A67B2004CD381 /* BFWizardViewController.m */,
 				2F4BCAE11A4A68D7004CD381 /* BFMainTabsViewController.h */,
 				2F4BCAE21A4A68D7004CD381 /* BFMainTabsViewController.m */,
+				2FB9161D1A656D8400754FDD /* BFTabsNavigationViewController.h */,
+				2FB9161E1A656D8400754FDD /* BFTabsNavigationViewController.m */,
 				2FB21DA31A4AA5DD00BC1765 /* BFHomeTabViewController.h */,
 				2FB21DA41A4AA5DE00BC1765 /* BFHomeTabViewController.m */,
 				2F1315171A4B162C002E4652 /* BFScanViewController.h */,
@@ -294,6 +310,16 @@
 				2F20CEA31A49369F0041012B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2F29FDC01A651D430061AC37 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				2F29FDC11A651D650061AC37 /* MainPageCollectionCell.xib */,
+				2F29FDC31A651E860061AC37 /* MainPageCollectionCell.h */,
+				2F29FDC41A651E860061AC37 /* MainPageCollectionCell.m */,
+			);
+			name = CollectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F29FDC21A651D650061AC37 /* MainPageCollectionCell.xib in Resources */,
 				2F13150B1A4B156E002E4652 /* .gitignore in Resources */,
 				2F20CE941A49369E0041012B /* Images.xcassets in Resources */,
 				2F20CE861A49369E0041012B /* InfoPlist.strings in Resources */,
@@ -406,10 +433,13 @@
 				2F1315191A4B162C002E4652 /* BFScanViewController.m in Sources */,
 				2FA49A731A49B83400689E7D /* BFAccountRegisterViewController.m in Sources */,
 				2F4BCAE31A4A68D7004CD381 /* BFMainTabsViewController.m in Sources */,
+				2FB9161F1A656D8400754FDD /* BFTabsNavigationViewController.m in Sources */,
 				2FB21DA51A4AA5DE00BC1765 /* BFHomeTabViewController.m in Sources */,
+				2F29FDBF1A651D310061AC37 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				2F20CE881A49369E0041012B /* main.m in Sources */,
 				2FA49A761A49C36000689E7D /* BFNavigationController.m in Sources */,
 				2FA49A701A49B81E00689E7D /* BFPhoneLoginViewController.m in Sources */,
+				2F29FDC51A651E860061AC37 /* MainPageCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

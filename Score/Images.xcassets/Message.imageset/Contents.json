@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "Message.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "massage.png"
+      "filename" : "Message@2x.png"
     }
   ],
   "info" : {

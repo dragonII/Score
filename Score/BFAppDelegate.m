@@ -15,13 +15,13 @@
 {
     // Override point for customization after application launch.
     
-    UIViewController *rootVC = self.window.rootViewController;
-    self.rootNavigationVC = (BFNavigationController *)rootVC;
-    [self.rootNavigationVC.navigationBar setBarTintColor:[UIColor redColor]];
+    //UIViewController *rootVC = self.window.rootViewController;
+    //self.rootNavigationVC = (BFNavigationController *)rootVC;
+    //[self.rootNavigationVC.navigationBar setBarTintColor:[UIColor redColor]];
     
-    NSString *resultStr = [BFDataPersistence getFirstLaunchValue];
+    //NSString *resultStr = [BFDataPersistence getFirstLaunchValue];
     
-    self.showWizard = [resultStr isEqualToString:@"YES"] ? YES : NO;
+    //self.showWizard = [resultStr isEqualToString:@"YES"] ? YES : NO;
     
     return YES;
 }

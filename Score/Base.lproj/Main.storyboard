@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eOJ-XV-SE6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dPM-VS-yfu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -108,41 +108,11 @@
                     <navigationItem key="navigationItem" id="piY-g4-mHa"/>
                     <connections>
                         <outlet property="imageView" destination="Jnz-nj-uaa" id="94e-am-WnW"/>
-                        <segue destination="dPM-VS-yfu" kind="push" identifier="ShowHomeTabs" id="eIs-F6-ypz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybc-hs-War" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="852"/>
-        </scene>
-        <!--Home Tab View Controller-->
-        <scene sceneID="tO3-tG-fh9">
-            <objects>
-                <viewController id="ov4-3W-LeO" customClass="BFHomeTabViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FEj-iS-iRU"/>
-                        <viewControllerLayoutGuide type="bottom" id="Lc3-Ye-WGP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RW9-NX-DJq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0W-4C-eYR">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="2Yx-aB-Ucs"/>
-                    <connections>
-                        <segue destination="27D-wq-zNl" kind="modal" identifier="ShowScanView" id="fgv-L7-lqd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nnQ-Kh-Ak3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1919" y="-8"/>
+            <point key="canvasLocation" x="-410" y="896"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="6Mo-12-anw">
@@ -155,10 +125,25 @@
                     <view key="view" contentMode="scaleToFill" id="XyG-br-lhd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIb-ne-gnp">
+                                <rect key="frame" x="20" y="32" width="88" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="取消">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.1934357324" blue="0.27796586699999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jdi-gL-mr7" kind="unwind" unwindAction="cancelQScan:" id="IXM-0l-fmH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dC7-3d-ccQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Jdi-gL-mr7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1919" y="-682"/>
         </scene>
@@ -324,29 +309,11 @@
             </objects>
             <point key="canvasLocation" x="-233" y="56"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Kye-2I-Ki4">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eOJ-XV-SE6" customClass="BFNavigationController" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zB1-Np-WUA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9UM-Mh-kMN" kind="relationship" relationship="rootViewController" id="ZZV-cn-1Gb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uju-gZ-GoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-228" y="852"/>
-        </scene>
-        <!--Navigation Controller - 首页-->
+        <!--Tabs Navigation View Controller - 首页-->
         <scene sceneID="PFr-RM-1VA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TVJ-lH-DC3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" image="home" id="at8-Le-ehz"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TVJ-lH-DC3" customClass="BFTabsNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="HomePage" id="at8-Le-ehz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7cO-5f-k60">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -354,18 +321,18 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ov4-3W-LeO" kind="relationship" relationship="rootViewController" id="dFd-J9-Bht"/>
+                        <segue destination="H2Y-5l-Nyo" kind="relationship" relationship="rootViewController" id="O8L-jE-ie4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfQ-tn-zBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1393" y="-8"/>
         </scene>
-        <!--Navigation Controller - 论坛-->
+        <!--Tabs Navigation View Controller - 购物车-->
         <scene sceneID="Hd8-EK-MYG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pYQ-71-Qcv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="论坛" image="page" id="t5H-zz-pzd"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pYQ-71-Qcv" customClass="BFTabsNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="购物车" image="Cart" id="t5H-zz-pzd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RJh-oW-qDx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -380,11 +347,11 @@
             </objects>
             <point key="canvasLocation" x="1393" y="644"/>
         </scene>
-        <!--Navigation Controller - 消息-->
+        <!--Tabs Navigation View Controller - 消息-->
         <scene sceneID="Lja-nM-H2Z">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wvt-uQ-TaA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="消息" image="massage" id="FKX-8A-zqC"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wvt-uQ-TaA" customClass="BFTabsNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="消息" image="Message" id="FKX-8A-zqC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vJj-wG-q66">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -399,11 +366,78 @@
             </objects>
             <point key="canvasLocation" x="1393" y="1356"/>
         </scene>
-        <!--Navigation Controller - 我-->
+        <!--Home Tab View Controller-->
+        <scene sceneID="QTl-lA-QeQ">
+            <objects>
+                <viewController id="H2Y-5l-Nyo" customClass="BFHomeTabViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sdC-Js-IbH"/>
+                        <viewControllerLayoutGuide type="bottom" id="dHO-Wr-Ki8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6dv-Xn-Gsw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMq-jP-TTg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="184"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="oOp-iD-xj9">
+                                        <rect key="frame" x="80" y="32" width="220" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcT-Dc-5fZ">
+                                        <rect key="frame" x="56" y="41.5" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="QRScan">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showScanView:" destination="H2Y-5l-Nyo" eventType="touchUpInside" id="ZHT-kK-Mmv"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BFLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xf0-OZ-hXp">
+                                        <rect key="frame" x="7" y="44" width="42" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="T0c-a7-FOL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yMq-jP-TTg" firstAttribute="top" secondItem="6dv-Xn-Gsw" secondAttribute="top" id="6I3-Vj-V56"/>
+                            <constraint firstAttribute="trailing" secondItem="yMq-jP-TTg" secondAttribute="trailing" id="ESt-B1-hbB"/>
+                            <constraint firstItem="yMq-jP-TTg" firstAttribute="leading" secondItem="6dv-Xn-Gsw" secondAttribute="leading" id="Qiv-60-kin"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RWP-zA-4Bs"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="wOT-34-eXa" id="EP5-VQ-W0q"/>
+                        <segue destination="27D-wq-zNl" kind="modal" identifier="ShowScanView" id="96n-9j-cHh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Qm-hz-vgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="wOT-34-eXa">
+                    <connections>
+                        <outlet property="delegate" destination="H2Y-5l-Nyo" id="PSZ-uH-rL6"/>
+                        <outlet property="searchContentsController" destination="H2Y-5l-Nyo" id="kdj-dg-5II"/>
+                        <outlet property="searchResultsDataSource" destination="H2Y-5l-Nyo" id="7zf-eq-eCf"/>
+                        <outlet property="searchResultsDelegate" destination="H2Y-5l-Nyo" id="Qgp-uj-2FK"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1919" y="-8"/>
+        </scene>
+        <!--Tabs Navigation View Controller - 我的-->
         <scene sceneID="sdO-Gz-adP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qX9-MS-8L2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我" image="user" id="8AL-WP-Sps"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qX9-MS-8L2" customClass="BFTabsNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="Me" id="8AL-WP-Sps"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gkR-5A-tWb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -420,13 +454,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BFLogo" width="42" height="20"/>
+        <image name="Cart" width="30" height="30"/>
+        <image name="HomePage" width="30" height="30"/>
         <image name="Logo" width="168" height="93"/>
+        <image name="Me" width="30" height="30"/>
+        <image name="Message" width="30" height="30"/>
+        <image name="QRScan" width="25" height="25"/>
         <image name="RoundedRect" width="275" height="89"/>
-        <image name="home" width="22" height="25"/>
-        <image name="massage" width="22" height="25"/>
-        <image name="page" width="22" height="25"/>
         <image name="phoneIcon" width="59" height="65"/>
-        <image name="user" width="22" height="25"/>
         <image name="weiboIcon" width="62" height="60"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

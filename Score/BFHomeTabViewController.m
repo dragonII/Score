@@ -7,8 +7,16 @@
 //
 
 #import "BFHomeTabViewController.h"
+#import "CHTCollectionViewWaterfallLayout.h"
+#import "MainPageCollectionCell.h"
 
-@interface BFHomeTabViewController ()
+static NSString *MainPageCellIdentifier = @"MainPageCell";
+
+@interface BFHomeTabViewController () <UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>
+
+@property (strong, nonatomic) UICollectionView *bodyCollectionView;
+
+@property (strong, nonatomic) NSArray *shopList;
 
 @end
 
@@ -23,13 +31,120 @@
     return self;
 }
 
+- (void)initTestData
+{
+    self.shopList = @[@{@"name":@"shop1", @"description":@"shop one"},
+                      @{@"name":@"shop2", @"description":@"shop two"},
+                      @{@"name":@"shop3", @"description":@"shop three"},
+                      @{@"name":@"shop4", @"description":@"shop four"},
+                      @{@"name":@"shop5", @"description":@"shop five"},
+                      @{@"name":@"shop6", @"description":@"shop six"},
+                      @{@"name":@"shop7", @"description":@"shop seven"},
+                      @{@"name":@"shop8", @"description":@"shop eight"},
+                      @{@"name":@"shop9", @"description":@"shop nine"}
+                      ];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    self.navigationController.navigationBar.hidden = YES;
     
-    [self initButtonsInView];
+    //q[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+
+    //self.navigationController.navigationBar.hidden = YES;
+    
+    //[self initButtonsInView];
+    
+    [self initTestData];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+    self.bodyCollectionView = [self makeBodyCollectionView];
+    
+    [self.view addSubview:self.bodyCollectionView];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self hideNavigationBar];
+}
+
+- (void)hideNavigationBar
+{
+    [self.navigationController.navigationBar setHidden:YES];
+}
+
+- (void)showNavigationBar
+{
+    [self.navigationController.navigationBar setHidden:NO];
+}
+
+- (UICollectionView *)makeBodyCollectionView
+{
+    if(!self.bodyCollectionView)
+    {
+        CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
+        layout.minimumColumnSpacing = 2;
+        layout.minimumInteritemSpacing = 2;
+        
+        CGRect rect = CGRectMake(self.view.bounds.origin.x,
+                                 self.view.bounds.origin.y + 184,
+                                 self.view.bounds.size.width,
+                                 self.view.bounds.size.height - 49 - 184);
+        
+        self.bodyCollectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:layout];
+        self.bodyCollectionView.backgroundColor = [UIColor blackColor];
+        self.bodyCollectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        self.bodyCollectionView.dataSource = self;
+        self.bodyCollectionView.delegate = self;
+        self.bodyCollectionView.backgroundColor = [UIColor whiteColor];
+        
+        [self.bodyCollectionView registerClass:[MainPageCollectionCell class] forCellWithReuseIdentifier:MainPageCellIdentifier];
+        
+        UINib *nib = [UINib nibWithNibName:@"MainPageCollectionCell" bundle:nil];
+        [self.bodyCollectionView registerNib:nib forCellWithReuseIdentifier:MainPageCellIdentifier];
+    }
+    
+    return self.bodyCollectionView;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(105, 105);
+    
+    //return CGSizeMake(self.bodyCollectionView.bounds.size.width, 40);
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    CHTCollectionViewWaterfallLayout *layout = (CHTCollectionViewWaterfallLayout *)self.bodyCollectionView.collectionViewLayout;
+
+    layout.columnCount = 3;
+    
+    return [self.shopList count];
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MainPageCollectionCell *cell = (MainPageCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:MainPageCellIdentifier forIndexPath:indexPath];
+    
+    NSDictionary *dict = [self.shopList objectAtIndex:indexPath.row];
+    cell.nameString = [dict objectForKey:@"name"];
+    
+    return cell;
 }
 
 - (void)buttonWithColor:(UIColor *)color Rect:(CGRect)rect Tag:(int)tag
@@ -149,7 +264,7 @@
 
     UIButton *qScanButton = [[UIButton alloc] initWithFrame:CGRectMake(15, 30, 40, 40)];
     [qScanButton setImage:[UIImage imageNamed:@"testIcon"] forState:UIControlStateNormal];
-    [qScanButton addTarget:nil action:@selector(showScanView) forControlEvents:UIControlEventTouchUpInside];
+    [qScanButton addTarget:nil action:@selector(showScanViewByModal) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:qScanButton];
     
     UIButton *switchButton = [[UIButton alloc] initWithFrame:CGRectMake(275, 30, 40, 40)];
@@ -157,11 +272,22 @@
     [self.view addSubview:switchButton];
 }
 
-- (void)showScanView
+
+- (void)showScanViewByModal
+{
+    [self performSegueWithIdentifier:@"ShowScanView" sender:nil];
+}
+ 
+
+- (IBAction)showScanView:(id)sender
 {
     [self performSegueWithIdentifier:@"ShowScanView" sender:nil];
 }
 
+- (IBAction)cancelQScan:(UIStoryboardSegue *)segue
+{
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

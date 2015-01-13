@@ -10,4 +10,8 @@
 
 @interface BFHomeTabViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *headerImageView;
+
+- (IBAction)cancelQScan:(UIStoryboardSegue *)segue;
+
 @end
