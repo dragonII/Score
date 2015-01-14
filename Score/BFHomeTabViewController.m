@@ -147,6 +147,13 @@ static NSString *MainPageCellIdentifier = @"MainPageCell";
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%@ Selected", [[self.shopList objectAtIndex:indexPath.row] objectForKey:@"description"]);
+    
+    [self performSegueWithIdentifier:@"ShowProductsView" sender:self];
+}
+
 - (void)buttonWithColor:(UIColor *)color Rect:(CGRect)rect Tag:(int)tag
 {
     UIButton *button = [[UIButton alloc] initWithFrame:rect];
@@ -284,7 +291,7 @@ static NSString *MainPageCellIdentifier = @"MainPageCell";
     [self performSegueWithIdentifier:@"ShowScanView" sender:nil];
 }
 
-- (IBAction)cancelQScan:(UIStoryboardSegue *)segue
+- (IBAction)cancelToHomeTab:(UIStoryboardSegue *)segue
 {
     
 }

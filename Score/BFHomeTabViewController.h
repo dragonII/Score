@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *headerImageView;
 
-- (IBAction)cancelQScan:(UIStoryboardSegue *)segue;
+//- (IBAction)cancelQScan:(UIStoryboardSegue *)segue;
+
+- (IBAction)cancelToHomeTab:(UIStoryboardSegue *)segue;
 
 @end
