@@ -10,4 +10,5 @@
 
 @interface BFScanViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *scanBackgroundImageView;
 @end

@@ -32,10 +32,19 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSLog(@"xxx");
+    self.view.backgroundColor = [UIColor colorWithRed:127/255.0f
+                                                green:127/255.0f
+                                                 blue:127/255.0f
+                                                alpha:1.0f
+                                 ];
     
     self.readerView = [[ZBarReaderView alloc] init];
-    self.readerView.frame = CGRectMake(60, CGRectGetMidY(self.view.frame) - 100, 200, 200);
+    CGRect frame = self.scanBackgroundImageView.frame;
+    //self.readerView.frame = CGRectMake(60, CGRectGetMidY(self.view.frame) - 100, 200, 200);
+    self.readerView.frame = CGRectMake(frame.origin.x + 3,
+                                       frame.origin.y + 3,
+                                       frame.size.width - 6,
+                                       frame.size.height - 6);
     self.readerView.torchMode = 0;
     self.readerView.readerDelegate = self;
     
