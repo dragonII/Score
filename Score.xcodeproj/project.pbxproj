@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F13150B1A4B156E002E4652 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2F1314F21A4B156E002E4652 /* .gitignore */; };
-		2F13150C1A4B156E002E4652 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F13150A1A4B156E002E4652 /* libzbar.a */; };
 		2F13150E1A4B159E002E4652 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F13150D1A4B159E002E4652 /* CoreMedia.framework */; };
 		2F1315101A4B15A9002E4652 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F13150F1A4B15A9002E4652 /* CoreVideo.framework */; };
 		2F1315121A4B15B7002E4652 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1315111A4B15B7002E4652 /* QuartzCore.framework */; };
@@ -38,6 +37,7 @@
 		2F6804A21A66416D00F79513 /* BFProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6804A11A66416D00F79513 /* BFProductsViewController.m */; };
 		2F6804A51A664D6200F79513 /* ProductTableItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6804A41A664D6200F79513 /* ProductTableItemCell.xib */; };
 		2F6804A81A664D7C00F79513 /* ProductTableItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6804A71A664D7C00F79513 /* ProductTableItemCell.m */; };
+		2F6DFF8F1A68E87200A17FAF /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6DFF8E1A68E87200A17FAF /* libzbar.a */; };
 		2FA49A6D1A49B80E00689E7D /* BFWeiboLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA49A6C1A49B80E00689E7D /* BFWeiboLoginViewController.m */; };
 		2FA49A701A49B81E00689E7D /* BFPhoneLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA49A6F1A49B81E00689E7D /* BFPhoneLoginViewController.m */; };
 		2FA49A731A49B83400689E7D /* BFAccountRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA49A721A49B83400689E7D /* BFAccountRegisterViewController.m */; };
@@ -79,7 +79,6 @@
 		2F1315071A4B156E002E4652 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
 		2F1315081A4B156E002E4652 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
 		2F1315091A4B156E002E4652 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
-		2F13150A1A4B156E002E4652 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
 		2F13150D1A4B159E002E4652 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		2F13150F1A4B15A9002E4652 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		2F1315111A4B15B7002E4652 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -122,6 +121,7 @@
 		2F6804A41A664D6200F79513 /* ProductTableItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableItemCell.xib; sourceTree = "<group>"; };
 		2F6804A61A664D7C00F79513 /* ProductTableItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableItemCell.h; sourceTree = "<group>"; };
 		2F6804A71A664D7C00F79513 /* ProductTableItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableItemCell.m; sourceTree = "<group>"; };
+		2F6DFF8E1A68E87200A17FAF /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzbar.a; path = "../../../Library/Developer/Xcode/DerivedData/zbar-gmkuzccwtprrgzaqwqnxndgereev/Build/Products/libzbar.a"; sourceTree = "<group>"; };
 		2FA49A6B1A49B80E00689E7D /* BFWeiboLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFWeiboLoginViewController.h; sourceTree = "<group>"; };
 		2FA49A6C1A49B80E00689E7D /* BFWeiboLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFWeiboLoginViewController.m; sourceTree = "<group>"; };
 		2FA49A6E1A49B81E00689E7D /* BFPhoneLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPhoneLoginViewController.h; sourceTree = "<group>"; };
@@ -145,12 +145,12 @@
 			files = (
 				2F1315161A4B15CF002E4652 /* libiconv.dylib in Frameworks */,
 				2F1315141A4B15C1002E4652 /* AVFoundation.framework in Frameworks */,
+				2F6DFF8F1A68E87200A17FAF /* libzbar.a in Frameworks */,
 				2F1315121A4B15B7002E4652 /* QuartzCore.framework in Frameworks */,
 				2F1315101A4B15A9002E4652 /* CoreVideo.framework in Frameworks */,
 				2F13150E1A4B159E002E4652 /* CoreMedia.framework in Frameworks */,
 				2F20CE7E1A49369E0041012B /* CoreGraphics.framework in Frameworks */,
 				2F20CE801A49369E0041012B /* UIKit.framework in Frameworks */,
-				2F13150C1A4B156E002E4652 /* libzbar.a in Frameworks */,
 				2F20CE7C1A49369E0041012B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,9 +171,9 @@
 		2F1314F11A4B156E002E4652 /* ZBarSDK */ = {
 			isa = PBXGroup;
 			children = (
+				2F6DFF8E1A68E87200A17FAF /* libzbar.a */,
 				2F1314F21A4B156E002E4652 /* .gitignore */,
 				2F1314F31A4B156E002E4652 /* Headers */,
-				2F13150A1A4B156E002E4652 /* libzbar.a */,
 			);
 			path = ZBarSDK;
 			sourceTree = "<group>";
@@ -608,6 +608,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/lwang/iosProjects/Score/ZBarSDK,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/zbar-gmkuzccwtprrgzaqwqnxndgereev/Build/Products",
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,6 +633,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/lwang/iosProjects/Score/ZBarSDK,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/zbar-gmkuzccwtprrgzaqwqnxndgereev/Build/Products",
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
