@@ -102,4 +102,14 @@ static NSString *ProductItemIdentifer = @"ProductItemIdentifier";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"ShowProductsView" sender:self];
+}
+
+- (IBAction)backToShopsView:(UIStoryboardSegue *)segue
+{
+    
+}
+
 @end

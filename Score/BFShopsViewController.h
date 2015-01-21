@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *productsTable;
 
+- (IBAction)backToShopsView:(UIStoryboardSegue *)segue;
+
 @end
