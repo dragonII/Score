@@ -34,7 +34,7 @@
 		2F4BCAE31A4A68D7004CD381 /* BFMainTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCAE21A4A68D7004CD381 /* BFMainTabsViewController.m */; };
 		2F4BCB271A4A94E4004CD381 /* BFDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCB261A4A94E4004CD381 /* BFDataPersistence.m */; };
 		2F68049F1A66127400F79513 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F68049E1A66127400F79513 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2F6804A21A66416D00F79513 /* BFProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6804A11A66416D00F79513 /* BFProductsViewController.m */; };
+		2F6804A21A66416D00F79513 /* BFShopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6804A11A66416D00F79513 /* BFShopsViewController.m */; };
 		2F6804A51A664D6200F79513 /* ProductTableItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6804A41A664D6200F79513 /* ProductTableItemCell.xib */; };
 		2F6804A81A664D7C00F79513 /* ProductTableItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6804A71A664D7C00F79513 /* ProductTableItemCell.m */; };
 		2F6DFF911A68EA7100A17FAF /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6DFF901A68EA7100A17FAF /* libzbar.a */; };
@@ -45,6 +45,7 @@
 		2FB21DA51A4AA5DE00BC1765 /* BFHomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB21DA41A4AA5DE00BC1765 /* BFHomeTabViewController.m */; };
 		2FB9161F1A656D8400754FDD /* BFTabsNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9161E1A656D8400754FDD /* BFTabsNavigationViewController.m */; };
 		2FEA5D7B1A49472400E5C767 /* BFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA5D7A1A49472400E5C767 /* BFLoginViewController.m */; };
+		2FF4D0771A6FE4B100A6EF26 /* BFProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4D0761A6FE4B100A6EF26 /* BFProductsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,8 +117,8 @@
 		2F4BCB261A4A94E4004CD381 /* BFDataPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDataPersistence.m; sourceTree = "<group>"; };
 		2F68049D1A66127400F79513 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		2F68049E1A66127400F79513 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
-		2F6804A01A66416D00F79513 /* BFProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFProductsViewController.h; sourceTree = "<group>"; };
-		2F6804A11A66416D00F79513 /* BFProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFProductsViewController.m; sourceTree = "<group>"; };
+		2F6804A01A66416D00F79513 /* BFShopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFShopsViewController.h; sourceTree = "<group>"; };
+		2F6804A11A66416D00F79513 /* BFShopsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFShopsViewController.m; sourceTree = "<group>"; };
 		2F6804A41A664D6200F79513 /* ProductTableItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableItemCell.xib; sourceTree = "<group>"; };
 		2F6804A61A664D7C00F79513 /* ProductTableItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableItemCell.h; sourceTree = "<group>"; };
 		2F6804A71A664D7C00F79513 /* ProductTableItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableItemCell.m; sourceTree = "<group>"; };
@@ -136,6 +137,8 @@
 		2FB9161E1A656D8400754FDD /* BFTabsNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTabsNavigationViewController.m; sourceTree = "<group>"; };
 		2FEA5D791A49472400E5C767 /* BFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFLoginViewController.h; sourceTree = "<group>"; };
 		2FEA5D7A1A49472400E5C767 /* BFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFLoginViewController.m; sourceTree = "<group>"; };
+		2FF4D0751A6FE4B100A6EF26 /* BFProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFProductsViewController.h; sourceTree = "<group>"; };
+		2FF4D0761A6FE4B100A6EF26 /* BFProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFProductsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,8 +282,10 @@
 				2FB9161E1A656D8400754FDD /* BFTabsNavigationViewController.m */,
 				2FB21DA31A4AA5DD00BC1765 /* BFHomeTabViewController.h */,
 				2FB21DA41A4AA5DE00BC1765 /* BFHomeTabViewController.m */,
-				2F6804A01A66416D00F79513 /* BFProductsViewController.h */,
-				2F6804A11A66416D00F79513 /* BFProductsViewController.m */,
+				2F6804A01A66416D00F79513 /* BFShopsViewController.h */,
+				2F6804A11A66416D00F79513 /* BFShopsViewController.m */,
+				2FF4D0751A6FE4B100A6EF26 /* BFProductsViewController.h */,
+				2FF4D0761A6FE4B100A6EF26 /* BFProductsViewController.m */,
 				2F1315171A4B162C002E4652 /* BFScanViewController.h */,
 				2F1315181A4B162C002E4652 /* BFScanViewController.m */,
 				2FEA5D791A49472400E5C767 /* BFLoginViewController.h */,
@@ -464,9 +469,10 @@
 				2FB9161F1A656D8400754FDD /* BFTabsNavigationViewController.m in Sources */,
 				2FB21DA51A4AA5DE00BC1765 /* BFHomeTabViewController.m in Sources */,
 				2F29FDBF1A651D310061AC37 /* CHTCollectionViewWaterfallLayout.m in Sources */,
+				2FF4D0771A6FE4B100A6EF26 /* BFProductsViewController.m in Sources */,
 				2F20CE881A49369E0041012B /* main.m in Sources */,
 				2F6804A81A664D7C00F79513 /* ProductTableItemCell.m in Sources */,
-				2F6804A21A66416D00F79513 /* BFProductsViewController.m in Sources */,
+				2F6804A21A66416D00F79513 /* BFShopsViewController.m in Sources */,
 				2FA49A761A49C36000689E7D /* BFNavigationController.m in Sources */,
 				2FA49A701A49B81E00689E7D /* BFPhoneLoginViewController.m in Sources */,
 				2F29FDC51A651E860061AC37 /* MainPageCollectionCell.m in Sources */,

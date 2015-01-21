@@ -151,7 +151,7 @@ static NSString *MainPageCellIdentifier = @"MainPageCell";
 {
     NSLog(@"%@ Selected", [[self.shopList objectAtIndex:indexPath.row] objectForKey:@"description"]);
     
-    [self performSegueWithIdentifier:@"ShowProductsView" sender:self];
+    [self performSegueWithIdentifier:@"ShowShopsView" sender:self];
 }
 
 - (void)buttonWithColor:(UIColor *)color Rect:(CGRect)rect Tag:(int)tag
