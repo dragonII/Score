@@ -518,7 +518,7 @@
                                     <constraint firstItem="5wJ-Yu-8Rd" firstAttribute="leading" secondItem="Ssd-xg-MhC" secondAttribute="leading" id="cjC-y5-Iz8"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fl9-zA-UbJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RatingBar" translatesAutoresizingMaskIntoConstraints="NO" id="fl9-zA-UbJ">
                                 <rect key="frame" x="0.0" y="64" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -588,23 +588,13 @@
                                             <constraint firstAttribute="width" constant="220" id="n3q-dr-0WW"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" tag="12" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xbb-Ri-UPd">
+                                    <tableView clipsSubviews="YES" tag="12" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xbb-Ri-UPd">
                                         <rect key="frame" x="100" y="20" width="220" height="395"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="4Ah-IH-Ewu"/>
                                         </constraints>
-                                        <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" id="v3v-fS-5xM">
-                                                <rect key="frame" x="0.0" y="22" width="220" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v3v-fS-5xM" id="dQt-nJ-r9I">
-                                                    <rect key="frame" x="0.0" y="0.0" width="220" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -661,6 +651,7 @@
         <image name="Message" width="30" height="30"/>
         <image name="QRScan" width="25" height="25"/>
         <image name="QRScanBG" width="208" height="208"/>
+        <image name="RatingBar" width="320" height="43"/>
         <image name="RedButtonBG" width="206" height="54"/>
         <image name="RoundedRect" width="275" height="89"/>
         <image name="ShoppingCartRound" width="57" height="57"/>

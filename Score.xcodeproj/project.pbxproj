@@ -33,6 +33,8 @@
 		2F4BCAE01A4A67B2004CD381 /* BFWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCADF1A4A67B2004CD381 /* BFWizardViewController.m */; };
 		2F4BCAE31A4A68D7004CD381 /* BFMainTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCAE21A4A68D7004CD381 /* BFMainTabsViewController.m */; };
 		2F4BCB271A4A94E4004CD381 /* BFDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCB261A4A94E4004CD381 /* BFDataPersistence.m */; };
+		2F626B811A70EBBA005C4DFD /* ProductsTableItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F626B801A70EBBA005C4DFD /* ProductsTableItemCell.xib */; };
+		2F626B841A70EE43005C4DFD /* ProductsTableItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F626B831A70EE43005C4DFD /* ProductsTableItemCell.m */; };
 		2F68049F1A66127400F79513 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F68049E1A66127400F79513 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2F6804A21A66416D00F79513 /* BFShopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6804A11A66416D00F79513 /* BFShopsViewController.m */; };
 		2F6804A51A664D6200F79513 /* ShopsTableItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6804A41A664D6200F79513 /* ShopsTableItemCell.xib */; };
@@ -115,6 +117,9 @@
 		2F4BCAE21A4A68D7004CD381 /* BFMainTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMainTabsViewController.m; sourceTree = "<group>"; };
 		2F4BCB251A4A94E4004CD381 /* BFDataPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDataPersistence.h; sourceTree = "<group>"; };
 		2F4BCB261A4A94E4004CD381 /* BFDataPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDataPersistence.m; sourceTree = "<group>"; };
+		2F626B801A70EBBA005C4DFD /* ProductsTableItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductsTableItemCell.xib; sourceTree = "<group>"; };
+		2F626B821A70EE43005C4DFD /* ProductsTableItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsTableItemCell.h; sourceTree = "<group>"; };
+		2F626B831A70EE43005C4DFD /* ProductsTableItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsTableItemCell.m; sourceTree = "<group>"; };
 		2F68049D1A66127400F79513 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		2F68049E1A66127400F79513 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		2F6804A01A66416D00F79513 /* BFShopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFShopsViewController.h; sourceTree = "<group>"; };
@@ -349,6 +354,9 @@
 				2F6804A41A664D6200F79513 /* ShopsTableItemCell.xib */,
 				2F6804A61A664D7C00F79513 /* ShopsTableItemCell.h */,
 				2F6804A71A664D7C00F79513 /* ShopsTableItemCell.m */,
+				2F626B801A70EBBA005C4DFD /* ProductsTableItemCell.xib */,
+				2F626B821A70EE43005C4DFD /* ProductsTableItemCell.h */,
+				2F626B831A70EE43005C4DFD /* ProductsTableItemCell.m */,
 			);
 			name = TableCell;
 			sourceTree = "<group>";
@@ -439,6 +447,7 @@
 				2F20CE941A49369E0041012B /* Images.xcassets in Resources */,
 				2F20CE861A49369E0041012B /* InfoPlist.strings in Resources */,
 				2F20CE8F1A49369E0041012B /* Main.storyboard in Resources */,
+				2F626B811A70EBBA005C4DFD /* ProductsTableItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F20CE8C1A49369E0041012B /* BFAppDelegate.m in Sources */,
+				2F626B841A70EE43005C4DFD /* ProductsTableItemCell.m in Sources */,
 				2F68049F1A66127400F79513 /* GDataXMLNode.m in Sources */,
 				2F4BCB271A4A94E4004CD381 /* BFDataPersistence.m in Sources */,
 				2FA49A6D1A49B80E00689E7D /* BFWeiboLoginViewController.m in Sources */,

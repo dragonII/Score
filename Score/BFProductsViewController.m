@@ -7,12 +7,13 @@
 //
 
 #import "BFProductsViewController.h"
+#import "ProductsTableItemCell.h"
 
 static NSInteger CategoryTableTag = 11;
 static NSInteger ProductTableTag = 12;
 
 static NSString *CategoryCellIdentifier = @"CategoryCell";
-static NSString *ProductCellIdentifier = @"ProductCell";
+static NSString *ProductCellIdentifier = @"ProductItemIdentifier";
 
 @interface BFProductsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;
@@ -67,6 +68,18 @@ static NSString *ProductCellIdentifier = @"ProductCell";
                                  ];
 }
 
+- (void)initProductTable
+{
+    self.productsTable.delegate = self;
+    self.productsTable.dataSource = self;
+    
+    self.productsTable.rowHeight = 62;
+    
+    [self.productsTable registerClass:[ProductsTableItemCell class] forCellReuseIdentifier:ProductCellIdentifier];
+    UINib *nib = [UINib nibWithNibName:@"ProductsTableItemCell" bundle:nil];
+    [self.productsTable registerNib:nib forCellReuseIdentifier:ProductCellIdentifier];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -77,8 +90,9 @@ static NSString *ProductCellIdentifier = @"ProductCell";
     
     self.categoryTable.delegate = self;
     self.categoryTable.dataSource = self;
-    self.productsTable.delegate = self;
-    self.productsTable.dataSource = self;
+    //self.productsTable.delegate = self;
+    //self.productsTable.dataSource = self;
+    [self initProductTable];
     
     [self initProductsInCategories];
 }
@@ -112,23 +126,27 @@ static NSString *ProductCellIdentifier = @"ProductCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
     NSString *categoryKeyString;
     NSDictionary *dict;
     //NSArray *array;
     if(tableView.tag == CategoryTableTag)
     {
+        UITableViewCell *cell;
         cell = [self.categoryTable dequeueReusableCellWithIdentifier:CategoryCellIdentifier forIndexPath:indexPath];
         cell.textLabel.text = [[[self.productsForCategory objectAtIndex:indexPath.row] allKeys] objectAtIndex:0];
+        return cell;
     } else {
-        cell = [self.productsTable dequeueReusableCellWithIdentifier:ProductCellIdentifier forIndexPath:indexPath];
+        ProductsTableItemCell *cell = (ProductsTableItemCell *)[self.productsTable dequeueReusableCellWithIdentifier:ProductCellIdentifier forIndexPath:indexPath];
         categoryKeyString = [[[self.productsForCategory objectAtIndex:self.currentCategoryIndex] allKeys] objectAtIndex:0];
         //NSArray *tmpArray = [self.productsForCategory objectAtIndex:self.currentCategoryIndex] objectForKey:<#(id)#>
         dict = (NSDictionary *)[[[self.productsForCategory objectAtIndex:self.currentCategoryIndex] objectForKey:categoryKeyString] objectAtIndex:indexPath.row];
-        cell.textLabel.text = [dict objectForKey:@"name"];
+    
+        cell.nameLabel.text = [dict objectForKey:@"name"];
+        cell.priceLabel.text = [dict objectForKey:@"price"];
         self.categoryLabel.text = categoryKeyString;
+        
+        return cell;
     }
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,6 +155,10 @@ static NSString *ProductCellIdentifier = @"ProductCell";
     {
         self.currentCategoryIndex = indexPath.row;
         [self.productsTable reloadData];
+    }
+    if(tableView.tag == ProductTableTag)
+    {
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }
 }
 

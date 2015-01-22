@@ -31,7 +31,7 @@ static NSString *ShopItemIdentifer = @"ShopItemIdentifier";
     return self;
 }
 
-- (void)initProductsTable
+- (void)initShopsTable
 {
     self.productsTable.delegate = self;
     self.productsTable.dataSource = self;
@@ -43,7 +43,7 @@ static NSString *ShopItemIdentifer = @"ShopItemIdentifier";
     [self.productsTable registerNib:nib forCellReuseIdentifier:ShopItemIdentifer];
 }
 
-- (void)initProductList
+- (void)initShopList
 {
     /*
     self.shopList = @[@{@"name":@"shop1", @"description":@"shop one"},
@@ -71,9 +71,9 @@ static NSString *ShopItemIdentifer = @"ShopItemIdentifier";
     
     [self setNeedsStatusBarAppearanceUpdate];
     
-    [self initProductsTable];
+    [self initShopsTable];
     
-    [self initProductList];
+    [self initShopList];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
