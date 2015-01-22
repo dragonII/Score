@@ -7,13 +7,16 @@
 //
 
 #import "BFShopsViewController.h"
-#import "ProductTableItemCell.h"
+#import "ShopsTableItemCell.h"
+#import "BFProductsViewController.h"
 
-static NSString *ProductItemIdentifer = @"ProductItemIdentifier";
+static NSString *ShopItemIdentifer = @"ShopItemIdentifier";
 
 @interface BFShopsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray *productListArray;
+
+@property NSInteger currentSelectedRowIndex;
 
 @end
 
@@ -35,9 +38,9 @@ static NSString *ProductItemIdentifer = @"ProductItemIdentifier";
     
     self.productsTable.rowHeight = 68;
     
-    [self.productsTable registerClass:[ProductTableItemCell class] forCellReuseIdentifier:ProductItemIdentifer];
-    UINib *nib = [UINib nibWithNibName:@"ProductTableItemCell" bundle:nil];
-    [self.productsTable registerNib:nib forCellReuseIdentifier:ProductItemIdentifer];
+    [self.productsTable registerClass:[ShopsTableItemCell class] forCellReuseIdentifier:ShopItemIdentifer];
+    UINib *nib = [UINib nibWithNibName:@"ShopsTableItemCell" bundle:nil];
+    [self.productsTable registerNib:nib forCellReuseIdentifier:ShopItemIdentifer];
 }
 
 - (void)initProductList
@@ -91,7 +94,7 @@ static NSString *ProductItemIdentifer = @"ProductItemIdentifier";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ProductTableItemCell *cell = (ProductTableItemCell *)[tableView dequeueReusableCellWithIdentifier:ProductItemIdentifer forIndexPath:indexPath];
+    ShopsTableItemCell *cell = (ShopsTableItemCell *)[tableView dequeueReusableCellWithIdentifier:ShopItemIdentifer forIndexPath:indexPath];
     
     cell.nameString = [[self.productListArray objectAtIndex:indexPath.row] objectForKey:@"name"];
     cell.imagePath = [[self.productListArray objectAtIndex:indexPath.row] objectForKey:@"image"];
@@ -102,8 +105,18 @@ static NSString *ProductItemIdentifer = @"ProductItemIdentifier";
     return cell;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSString *shopNameString = [[self.productListArray objectAtIndex:self.currentSelectedRowIndex] objectForKey:@"name"];
+    if([segue.destinationViewController isKindOfClass:[BFProductsViewController class]])
+    {
+        [(BFProductsViewController *)segue.destinationViewController setShopNameString:shopNameString];
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.currentSelectedRowIndex = indexPath.row;
     [self performSegueWithIdentifier:@"ShowProductsView" sender:self];
 }
 

@@ -15,6 +15,8 @@ static NSString *CategoryCellIdentifier = @"CategoryCell";
 static NSString *ProductCellIdentifier = @"ProductCell";
 
 @interface BFProductsViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UITableView *categoryTable;
 @property (weak, nonatomic) IBOutlet UITableView *productsTable;
@@ -33,6 +35,13 @@ static NSString *ProductCellIdentifier = @"ProductCell";
         // Custom initialization
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.shopNameLabel.text = self.shopNameString;
 }
 
 - (void)initProductsInCategories

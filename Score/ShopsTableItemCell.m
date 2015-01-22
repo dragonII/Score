@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Wang Long. All rights reserved.
 //
 
-#import "ProductTableItemCell.h"
+#import "ShopsTableItemCell.h"
 
 static NSString *RatingStarName = @"ratingStar";
 static NSString *HalfRatingStarName = @"halfRatingStar";
 static NSString *NoRatingStarName = @"noRating";
 
-@implementation ProductTableItemCell
+@implementation ShopsTableItemCell
 
 - (void)initDefaultRatingStars
 {

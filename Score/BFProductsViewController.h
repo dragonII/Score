@@ -10,4 +10,6 @@
 
 @interface BFProductsViewController : UIViewController
 
+@property (copy, nonatomic) NSString *shopNameString;
+
 @end

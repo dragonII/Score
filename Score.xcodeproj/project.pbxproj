@@ -35,8 +35,8 @@
 		2F4BCB271A4A94E4004CD381 /* BFDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BCB261A4A94E4004CD381 /* BFDataPersistence.m */; };
 		2F68049F1A66127400F79513 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F68049E1A66127400F79513 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2F6804A21A66416D00F79513 /* BFShopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6804A11A66416D00F79513 /* BFShopsViewController.m */; };
-		2F6804A51A664D6200F79513 /* ProductTableItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6804A41A664D6200F79513 /* ProductTableItemCell.xib */; };
-		2F6804A81A664D7C00F79513 /* ProductTableItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6804A71A664D7C00F79513 /* ProductTableItemCell.m */; };
+		2F6804A51A664D6200F79513 /* ShopsTableItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6804A41A664D6200F79513 /* ShopsTableItemCell.xib */; };
+		2F6804A81A664D7C00F79513 /* ShopsTableItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6804A71A664D7C00F79513 /* ShopsTableItemCell.m */; };
 		2F6DFF911A68EA7100A17FAF /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6DFF901A68EA7100A17FAF /* libzbar.a */; };
 		2FA49A6D1A49B80E00689E7D /* BFWeiboLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA49A6C1A49B80E00689E7D /* BFWeiboLoginViewController.m */; };
 		2FA49A701A49B81E00689E7D /* BFPhoneLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA49A6F1A49B81E00689E7D /* BFPhoneLoginViewController.m */; };
@@ -119,9 +119,9 @@
 		2F68049E1A66127400F79513 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		2F6804A01A66416D00F79513 /* BFShopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFShopsViewController.h; sourceTree = "<group>"; };
 		2F6804A11A66416D00F79513 /* BFShopsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFShopsViewController.m; sourceTree = "<group>"; };
-		2F6804A41A664D6200F79513 /* ProductTableItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableItemCell.xib; sourceTree = "<group>"; };
-		2F6804A61A664D7C00F79513 /* ProductTableItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableItemCell.h; sourceTree = "<group>"; };
-		2F6804A71A664D7C00F79513 /* ProductTableItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableItemCell.m; sourceTree = "<group>"; };
+		2F6804A41A664D6200F79513 /* ShopsTableItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopsTableItemCell.xib; sourceTree = "<group>"; };
+		2F6804A61A664D7C00F79513 /* ShopsTableItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopsTableItemCell.h; sourceTree = "<group>"; };
+		2F6804A71A664D7C00F79513 /* ShopsTableItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopsTableItemCell.m; sourceTree = "<group>"; };
 		2F6DFF901A68EA7100A17FAF /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
 		2FA49A6B1A49B80E00689E7D /* BFWeiboLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFWeiboLoginViewController.h; sourceTree = "<group>"; };
 		2FA49A6C1A49B80E00689E7D /* BFWeiboLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFWeiboLoginViewController.m; sourceTree = "<group>"; };
@@ -346,9 +346,9 @@
 		2F6804A31A664D3B00F79513 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
-				2F6804A41A664D6200F79513 /* ProductTableItemCell.xib */,
-				2F6804A61A664D7C00F79513 /* ProductTableItemCell.h */,
-				2F6804A71A664D7C00F79513 /* ProductTableItemCell.m */,
+				2F6804A41A664D6200F79513 /* ShopsTableItemCell.xib */,
+				2F6804A61A664D7C00F79513 /* ShopsTableItemCell.h */,
+				2F6804A71A664D7C00F79513 /* ShopsTableItemCell.m */,
 			);
 			name = TableCell;
 			sourceTree = "<group>";
@@ -434,7 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F29FDC21A651D650061AC37 /* MainPageCollectionCell.xib in Resources */,
-				2F6804A51A664D6200F79513 /* ProductTableItemCell.xib in Resources */,
+				2F6804A51A664D6200F79513 /* ShopsTableItemCell.xib in Resources */,
 				2F13150B1A4B156E002E4652 /* .gitignore in Resources */,
 				2F20CE941A49369E0041012B /* Images.xcassets in Resources */,
 				2F20CE861A49369E0041012B /* InfoPlist.strings in Resources */,
@@ -471,7 +471,7 @@
 				2F29FDBF1A651D310061AC37 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				2FF4D0771A6FE4B100A6EF26 /* BFProductsViewController.m in Sources */,
 				2F20CE881A49369E0041012B /* main.m in Sources */,
-				2F6804A81A664D7C00F79513 /* ProductTableItemCell.m in Sources */,
+				2F6804A81A664D7C00F79513 /* ShopsTableItemCell.m in Sources */,
 				2F6804A21A66416D00F79513 /* BFShopsViewController.m in Sources */,
 				2FA49A761A49C36000689E7D /* BFNavigationController.m in Sources */,
 				2FA49A701A49B81E00689E7D /* BFPhoneLoginViewController.m in Sources */,

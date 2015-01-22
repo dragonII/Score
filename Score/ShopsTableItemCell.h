@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProductTableItemCell : UITableViewCell
+@interface ShopsTableItemCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *productImgView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
