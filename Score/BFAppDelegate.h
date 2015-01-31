@@ -10,10 +10,14 @@
 
 #import "BFNavigationController.h"
 
+@class AFHTTPSessionManager;
+
 @interface BFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) BFNavigationController *rootNavigationVC;
 @property (nonatomic) BOOL showWizard;
+
++ (AFHTTPSessionManager *)sharedHttpSessionManager;
 
 @end

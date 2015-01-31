@@ -10,8 +10,10 @@
 
 @interface MainPageCollectionCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @property (copy, nonatomic) NSString *nameString;
+@property (copy, nonatomic) NSString *thumbnailString;
 
 @end

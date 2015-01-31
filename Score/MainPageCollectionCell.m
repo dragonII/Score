@@ -7,7 +7,7 @@
 //
 
 #import "MainPageCollectionCell.h"
-
+#import "UIKit+AFNetworking.h"
 @implementation MainPageCollectionCell
 
 - (id)initWithFrame:(CGRect)frame
@@ -25,6 +25,15 @@
     {
         _nameString = [nameString copy];
         _nameLabel.text = _nameString;
+    }
+}
+
+- (void)setThumbnailString:(NSString *)thumbnailString
+{
+    if(![_thumbnailString isEqual:thumbnailString])
+    {
+        _thumbnailString = [thumbnailString copy];
+        [_imageView setImageWithURL:[NSURL URLWithString:_thumbnailString]];
     }
 }
 

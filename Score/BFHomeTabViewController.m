@@ -9,14 +9,25 @@
 #import "BFHomeTabViewController.h"
 #import "CHTCollectionViewWaterfallLayout.h"
 #import "MainPageCollectionCell.h"
+#import "AFNetworking.h"
+#import "BFAppDelegate.h"
+#import "BFDataPersistence.h"
+#import "defs.h"
 
 static NSString *MainPageCellIdentifier = @"MainPageCell";
+static NSString *GarbageString = @"Thread was being aborted.";
 
 @interface BFHomeTabViewController () <UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>
 
 @property (strong, nonatomic) UICollectionView *bodyCollectionView;
 
 @property (strong, nonatomic) NSArray *shopList;
+
+@property dispatch_group_t loadDataGroup;
+
+@property (strong, nonatomic) AFHTTPSessionManager *httpSessionManager;
+
+@property (strong, nonatomic) NSArray *productListArray;
 
 @end
 
@@ -45,6 +56,99 @@ static NSString *MainPageCellIdentifier = @"MainPageCell";
                       ];
 }
 
+- (NSString *)stringByRemovingControlCharacters:(NSString *)inputString
+{
+    NSCharacterSet *controlChars = [NSCharacterSet controlCharacterSet];
+    NSRange range = [inputString rangeOfCharacterFromSet:controlChars];
+    if(range.location != NSNotFound)
+    {
+        NSMutableString *mutable = [NSMutableString stringWithString:inputString];
+        while(range.location != NSNotFound)
+        {
+            [mutable deleteCharactersInRange:range];
+            range = [mutable rangeOfCharacterFromSet:controlChars];
+        }
+        return mutable;
+    }
+    return inputString;
+}
+
+- (NSArray *)prepareForParse:(id)responseObject
+{
+    NSString *rawString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+    NSString *noEscapedString = [self stringByRemovingControlCharacters:rawString];
+    
+    NSString *cleanString = [noEscapedString stringByReplacingOccurrencesOfString:GarbageString withString:@""];
+    cleanString = [cleanString stringByReplacingOccurrencesOfString:@"\'" withString:@"\""];
+    //NSLog(@"cleanString: %@", cleanString);
+    
+    NSData *data = [cleanString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error = nil;
+    id json = [NSJSONSerialization JSONObjectWithData:data
+                                              options:0
+                                                error:&error];
+    if(error)
+    {
+        NSLog(@"Error in prepareForParse: %@", error);
+    }
+    
+    NSArray *outerArray = [json objectForKey:@"data"];
+    return outerArray;
+}
+
+- (void)parseProductJson:(id)responseObject
+{
+    NSArray *outerArray = [self prepareForParse:responseObject];
+    
+    NSMutableDictionary *dict;
+    NSMutableArray *productsArray = [[NSMutableArray alloc] init];
+    
+    for(NSArray *innerArray in outerArray)
+    {
+        dict = [[NSMutableDictionary alloc] init];
+        
+        [dict setObject:[innerArray objectAtIndex:0] forKey:ProductIDKey];
+        [dict setObject:[innerArray objectAtIndex:1] forKey:ProductNameKey];
+        [dict setObject:[innerArray objectAtIndex:2] forKey:ProductBrandKey];
+        [dict setObject:[innerArray objectAtIndex:3] forKey:ProductCategoryKey];
+        [dict setObject:[innerArray objectAtIndex:4] forKey:ProductPriceKey];
+        [dict setObject:[baseURLString stringByAppendingPathComponent:[innerArray objectAtIndex:5]] forKey:ProductThumbnailPathKey];
+        [dict setObject:[baseURLString stringByAppendingPathComponent:[innerArray objectAtIndex:6]] forKey:ProductImagePathKey];
+        
+        [productsArray addObject:dict];
+    }
+    
+    [BFDataPersistence saveProductsPreferenceArray:productsArray];
+}
+
+- (void)getProductsInformation
+{
+    dispatch_group_enter(_loadDataGroup);
+    
+    [self.httpSessionManager GET:@"lsproduct/product.ds"
+                      parameters:nil
+                         success:^(NSURLSessionDataTask *task, id responseObject) {
+                             [self parseProductJson:responseObject];
+                             dispatch_group_leave(_loadDataGroup);
+                         }failure:^(NSURLSessionDataTask *task, NSError *error) {
+                             NSLog(@"Error: %@", error);
+                             dispatch_group_leave(_loadDataGroup);
+                         }];
+}
+
+- (void)loadProductsData
+{
+    _loadDataGroup = dispatch_group_create();
+    
+    [self getProductsInformation];
+    
+    dispatch_group_notify(_loadDataGroup, dispatch_get_main_queue(), ^{
+        _productListArray = [BFDataPersistence loadProductsArray];
+        //NSLog(@"ProductListArray: %@", _productListArray);
+        [self.bodyCollectionView reloadData];
+    });
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -55,7 +159,10 @@ static NSString *MainPageCellIdentifier = @"MainPageCell";
     
     //[self initButtonsInView];
     
-    [self initTestData];
+    self.httpSessionManager = [BFAppDelegate sharedHttpSessionManager];
+    
+    //[self initTestData];
+    [self loadProductsData];
     
     [self setNeedsStatusBarAppearanceUpdate];
     
@@ -95,9 +202,13 @@ static NSString *MainPageCellIdentifier = @"MainPageCell";
         layout.minimumInteritemSpacing = 2;
         
         CGRect rect = CGRectMake(self.view.bounds.origin.x,
-                                 self.view.bounds.origin.y + 184,
+                                 self.view.bounds.origin.y + 184 + 2,
                                  self.view.bounds.size.width,
                                  self.view.bounds.size.height - 49 - 184);
+        
+        //UIEdgeInsets contentInsets = self.bodyCollectionView.contentInset;
+        //contentInsets.top = 2;
+        //self.bodyCollectionView.contentInset = contentInsets;
         
         self.bodyCollectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:layout];
         self.bodyCollectionView.backgroundColor = [UIColor blackColor];
@@ -133,7 +244,8 @@ static NSString *MainPageCellIdentifier = @"MainPageCell";
 
     layout.columnCount = 3;
     
-    return [self.shopList count];
+    //return [self.shopList count];
+    return [self.productListArray count];
 }
 
 
@@ -141,15 +253,19 @@ static NSString *MainPageCellIdentifier = @"MainPageCell";
 {
     MainPageCollectionCell *cell = (MainPageCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:MainPageCellIdentifier forIndexPath:indexPath];
     
-    NSDictionary *dict = [self.shopList objectAtIndex:indexPath.row];
-    cell.nameString = [dict objectForKey:@"name"];
+    //NSDictionary *dict = [self.shopList objectAtIndex:indexPath.row];
+    NSDictionary *dict = [self.productListArray objectAtIndex:indexPath.row];
+    //cell.nameString = [dict objectForKey:@"name"];
+    cell.nameString = [dict objectForKey:ProductNameKey];
+    cell.thumbnailString = [dict objectForKey:ProductThumbnailPathKey];
+    //cell.
     
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%@ Selected", [[self.shopList objectAtIndex:indexPath.row] objectForKey:@"description"]);
+    //NSLog(@"%@ Selected", [[self.shopList objectAtIndex:indexPath.row] objectForKey:@"description"]);
     
     [self performSegueWithIdentifier:@"ShowShopsView" sender:self];
 }

@@ -8,8 +8,22 @@
 
 #import "BFAppDelegate.h"
 #import "BFDataPersistence.h"
+#import "defs.h"
+#import "AFNetworking.h"
 
 @implementation BFAppDelegate
+
++ (AFHTTPSessionManager *)sharedHttpSessionManager
+{
+    static AFHTTPSessionManager *shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseURLString]];
+        shared.responseSerializer = [AFHTTPResponseSerializer serializer];
+        [shared.responseSerializer.acceptableContentTypes setByAddingObject:@"html/text"];
+    });
+    return shared;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

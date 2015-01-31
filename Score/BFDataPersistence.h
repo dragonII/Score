@@ -15,4 +15,7 @@
 + (void)saveUserName:(NSString *)userName andPassword:(NSString *)password;
 + (NSDictionary *)getUserPassword;
 
++ (NSArray *)loadProductsArray;
++ (void)saveProductsPreferenceArray:(NSMutableArray *)array;
+
 @end
